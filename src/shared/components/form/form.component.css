@@ -1,0 +1,17 @@
+input.ng-touched.ng-invalid{
+    border-color:red;
+    
+}
+.form{
+    /* direction: rtl; */
+    text-align-last: center;
+    background-color: gray;  
+ }
+.input{
+    width: 300px;
+   margin-left: 615px;
+}
+.lable{
+color: red;
+font-size: 20px;
+}

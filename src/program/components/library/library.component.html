@@ -1,0 +1,25 @@
+<div class="library">
+<p>hello {{userName|camel}}!!</p>
+<label>מספר ההשאלות:{{sumlendings}}</label>
+<br>
+<div></div>
+<app-book  (num)="AddBook($event)"*ngFor ="let l of allBook" [b]=l [age]="age" >
+    <div>you are tooooooooooo young</div>
+</app-book>
+<label>your age:<input [(ngModel)]="age"></label><br><br>
+
+<button routerLink="add" (click)= "flag=true" class="btn btn-default btn-lg.active addNewBook">add new book</button><br><br>
+<app-new-book *ngIf="flag==true"(num2)="addnewbook2($event)" ></app-new-book>
+<!-- <router-outlet (num2)="addnewbook2($event)"></router-outlet> -->
+
+
+<label><input #bookName  >  הכנס שם של ספר כדי לקבל את המידע אודותיו </label> 
+<br> 
+<span id="book" >{{book1|json}}</span><br>
+<button (click)="getBook(bookName.value)">לחץ כדי להציג את פרטי הספר שהכנסת</button>
+</div>
+                                                                  
+
+
+
+

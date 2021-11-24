@@ -1,0 +1,42 @@
+
+<form class="form" (ngSubmit)="jjj.reset()" #jjj="ngForm">
+    <label class="lable">:ת.ז</label>
+    <input class="form-control input" name="id" type="text" #id="ngModel" required [(ngModel)]="OurUser.id">
+    <label *ngIf="!id.valid&&id.touched">זהו שדה חובה</label><br>
+    <label class="lable">:שם פרטי </label>
+    <input class="form-control input" name="userFName" #firsName="ngModel" type="text"  required [(ngModel)]="OurUser.name.firstName">
+    <label *ngIf="!firsName.valid&&firsName.touched">זהו שדה חובה</label><br>
+    <label class="lable">:שם משפחה </label>
+    <input class="form-control input" name="userLName" type="text" #lastName="ngModel" required [(ngModel)]="OurUser.name.LastName">
+    <label *ngIf="!lastName.valid&&lastName.touched">זהו שדה חובה</label><br>
+    <label class="lable">:מייל </label>
+    <input class="form-control input" name="email" type="text" #email="ngModel" required email  [(ngModel)]="OurUser.email"><br>
+    <!--<label *ngIf="!email.valid.required&&email.touched">זהו שדה חובה</label><br><br>-->
+    <label class="lable">:טלפון </label>
+    <input class="form-control input" name="phone" type="number"  CorectPhone [(ngModel)]="OurUser.phone"><br>
+    <label class="lable">:כתובת </label>
+    <input class="form-control input" name="address" type="text" [(ngModel)]="OurUser.address"><br>
+    <label class="lable">:סיסמא </label>
+    <input class="form-control input" name="password" #password="ngModel" type="password" minlength="8" [(ngModel)]="OurUser.password.pwd"><br>
+    <label class="lable">: אימות סיסמא </label>
+    <input class="form-control input" name="usercode" #usercode="ngModel" type="password" [(ngModel)]="OurUser.password.confirmPwd">
+   <label *ngIf="password.value!=usercode.value&&usercode.touched" >סיסמא לא זהה</label><br>
+    <label class="lable">:מין </label>  
+    
+<select class="form-control input" name=gender [(ngModel)]="OurUser.gender"><br/>
+    <option value="Default" >בחר מין </option>
+      <option value="male">זכר</option>
+      <option value="female">נקבה</option>
+  </select ><br>
+    <!-- <input class="form-control input" name="gender" type="text" [(ngModel)]="OurUser.gender"><br><br> -->
+    <input type="submit" (click)="save()"  [disabled]="!jjj.form.valid">
+    <a href="/login">חזרה לדף הבית</a>
+    <br><br>
+    <div>
+    <button routerLink="About">אודות הספריה שלנו</button>
+    <router-outlet></router-outlet>
+</div>
+</form>
+<div  id="123"></div>
+
+ 

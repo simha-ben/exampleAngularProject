@@ -1,0 +1,13 @@
+<div id="wapper">
+    <div class="login"> 
+    <label>שם משתמש<input class="form-control" [(ngModel)]="name"/></label>
+    <br>
+    <label>סיסמא <input class="form-control"/></label>
+    <br>
+
+    <br>
+    <button class="btn btn-default btn-lg.active enter"  routerLink="/Library/{{name}}">כניסה</button>
+    <button routerLink="/Form" class="btn btn-default btn-lg.active newUser">משתמש חדש</button>
+
+    </div>
+</div>

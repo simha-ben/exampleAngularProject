@@ -1,0 +1,10 @@
+
+
+    <span><br>Name: {{b.name}}<br>Auditor: {{b.auditor}}<br>Category: {{b.category}}<br></span>
+    <button (click)="newlanding()" class="btn btn-default btn-lg.active newlanding" [ngClass]="{'addALanding':b.sumOfLending>5}">add a lending </button>
+    <br>
+    <label>כמות מושאלת: {{b.sumOfLending}}</label><br>
+   
+    <ng-content *ngIf="f"></ng-content>
+
+

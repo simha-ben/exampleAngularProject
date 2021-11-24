@@ -1,0 +1,17 @@
+.newUser,
+.enter{
+    background-color: black;
+    color:#FFFFFF;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.login{
+  margin-top: 10%; 
+    text-align-last: center;
+    background-color: gray;  
+}
+#wapper{
+  background-color: gray !important;  
+  widows: 100% !important;
+  height: 100% !important;
+}
