@@ -4,6 +4,8 @@ import {HttpClient} from '@angular/common/http';
 import { HttpServerService } from './http-server.service';
 import { book } from 'src/program/models/Book';
 import { newUser } from 'src/program/models/newUser';
+import { ProgramVM } from 'src/program/models/Program';
+import { Observable } from 'rxjs';
 
 //import { pbkdf2Sync } from 'crypto';
 
@@ -63,9 +65,17 @@ this.allBook=[];
      },()=>{
        alert("הלקוח אינו נמצא במערכת");
      });
-     
+    }
+     addNewProgram(pvm:ProgramVM){
+       this.HttpClientService.post('Admin/newProgram',pvm)
+       .subscribe(res=> alert(res));
+     }
+     getAllPrograms():Observable<any>{
+      return this.HttpClientService.get('Program');
+
+    }
    }
 
 
 
-}
+

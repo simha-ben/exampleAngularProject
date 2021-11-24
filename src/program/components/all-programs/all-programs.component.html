@@ -1,0 +1,7 @@
+<div>
+    <li *ngFor="let item of allPrograms | async">
+        title:{{item.title}}  
+    </li>
+    <br>
+    <app-new-program (programAdded)="onProgramAdded($event)"></app-new-program>
+</div>

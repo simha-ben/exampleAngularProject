@@ -12,7 +12,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { SharedModule } from '../shared/shared.module';
 import{ProgramRoutingModule} from './program-routing.module'
 import{RouterModule, Route}from '@angular/router';
-//import { count } from 'console';
+import { NewProgramComponent } from './components/new-program/new-program.component';
+import { AllProgramsComponent } from './components/all-programs/all-programs.component';//import { count } from 'console';
 
 
 
@@ -22,7 +23,9 @@ import{RouterModule, Route}from '@angular/router';
     AboutComponent,
     BookComponent,
     LibraryComponent,
-    NewBookComponent
+    NewBookComponent,
+    NewProgramComponent,
+    AllProgramsComponent
   ],
   imports: [
     BrowserModule,
