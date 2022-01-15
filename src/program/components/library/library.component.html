@@ -3,12 +3,12 @@
 <label>מספר ההשאלות:{{sumlendings}}</label>
 <br>
 <div></div>
-<app-book  (num)="AddBook($event)"*ngFor ="let l of allBook" [b]=l [age]="age" >
+<app-book  (addLending)="AddLending($event)"*ngFor ="let book of allBook" [b]=book [age]="age" >
     <div>you are tooooooooooo young</div>
 </app-book>
 <label>your age:<input [(ngModel)]="age"></label><br><br>
 
-<button routerLink="add" (click)= "flag=true" class="btn btn-default btn-lg.active addNewBook">add new book</button><br><br>
+<button routerLink="add" (click)= "flag=!flag" class="btn btn-default btn-lg.active addNewBook">add new book</button><br><br>
 <app-new-book *ngIf="flag==true"(num2)="addnewbook2($event)" ></app-new-book>
 <!-- <router-outlet (num2)="addnewbook2($event)"></router-outlet> -->
 

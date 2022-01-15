@@ -15,7 +15,7 @@ export class AllProgramsComponent implements OnInit {
 
   ngOnInit(): void {
     this.allPrograms = this.ds.getAllPrograms()
-    //.subscribe(res=> this.allPrograms = res);
+    //.subscribe(res=> this.allPrograms = res, err=>consol.log(err));
     //debugger;
   }
   allPrograms!: Observable<any>;

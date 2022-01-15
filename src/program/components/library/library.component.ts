@@ -41,7 +41,7 @@ export class LibraryComponent implements OnInit
   ngOnInit() {
   }
   allBook:book[];
-  AddBook(b:book){ 
+  AddLending(b:book){ 
     for (let index = 0; index < this.allBook.length; index++) {
       if(  this.allBook[index].name==b.name)
       {

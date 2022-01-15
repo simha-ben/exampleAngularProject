@@ -6,7 +6,7 @@ import { book } from 'src/program/models/Book';
   styleUrls: ['./book.component.css']
 })
 export class BookComponent implements OnInit {
-  @Output() num=new EventEmitter<book>();
+  @Output() addLending=new EventEmitter<book>();
   constructor() {
 this.age=0;
 this.f=false;
@@ -21,7 +21,7 @@ this.f=false;
    newlanding(){
    if(this.age<15 &&this.b.category=="adult")
       this.f=true;
-    else this.num.emit(this.b);
+    else this.addLending.emit(this.b);
  }
 }
 

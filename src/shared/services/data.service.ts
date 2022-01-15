@@ -28,11 +28,7 @@ this.allBook=[];
       });
     })
 
-    //this.allBook=[{name:"isterak",auditor:"m.keinan",category :"children",publishingYear:2000,sumOfLending:5},
-    //{name:"comixaba",auditor:"saba",category :"Comics",publishingYear:1990,sumOfLending:6},
-    //{name:"shimchaLoShachchno",auditor:"m.keinan",category :"adult",publishingYear:2020,sumOfLending:2},
-    //{name:"korimLi",auditor:"valder",category :"children",publishingYear:2010,sumOfLending:10}]
-  }
+    }
   getBookByName(name:string){
     var obs1= this.HttpClientService.get("book?name="+name);
     return obs1;
